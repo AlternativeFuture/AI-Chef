@@ -18,7 +18,7 @@ if os.environ.get('FLASK_ENV') == 'development':
 #                   and instruction for cooking for 5 dishes that can be prepared with the provided ingredients.'''
 # chicken, tomatoes, cheese, flour, pepperoni
 
-SYSTEM_PROMPT_JSON = 'You are a helpful assistant designed to output JSON.',
+SYSTEM_PROMPT_JSON = 'You are a helpful assistant designed to output JSON.'
 SYSTEM_PROMPT_CHEF = '''You are a useful helper that can supply the name of the meal, the ingredient 
           measurements in SI units, and cooking instructions for five different dishes that can be made with the 
           components that are provided.'''

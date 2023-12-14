@@ -20,8 +20,6 @@ def result():
 
             res, _ = gpt_response(config.GPT_CONFIG, request.form.get('ingredients'))
 
-            print(1111111111, request.form['ingredients'])
-
             return render_template("result.html", result=res)
 
         return redirect(url_for('result'))
