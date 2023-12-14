@@ -1,21 +1,21 @@
 from openai import OpenAI
+import json
 import config
 from decorators import timeit
 
 
 @timeit
 def gpt_response(gpt_config: dict, ingredients: str) -> tuple:
-
     try:
         client = OpenAI(api_key=gpt_config['api_key'])
 
         response = client.chat.completions.create(
             model=gpt_config['gpt_model'],
-            response_format={'type': 'json_object'},
+            response_format=gpt_config['response_format'],
             messages=[
-                {'role': 'system', 'content': gpt_config['system_prompt_json']},
-                {'role': 'system', 'content': gpt_config['system_prompt_chef']},
-                {'role': 'user', 'content': gpt_config['user_prompt'].format(ingredients)}
+                {'role': 'system', 'content': json.dumps([gpt_config['system_prompt_json'],
+                                                         gpt_config['system_prompt_chef']])},
+                {'role': 'user', 'content': json.dumps(gpt_config['user_prompt'].format(ingredients))}
             ],
             max_tokens=gpt_config['max_tokens'],
             temperature=gpt_config['temperature'],
@@ -30,7 +30,6 @@ def gpt_response(gpt_config: dict, ingredients: str) -> tuple:
 
 if __name__ == '__main__':
     res_content, spend_tokens = gpt_response(config.GPT_CONFIG, 'cheese, bacon')
-
+    print(type(res_content))
     print('Response Content:', res_content)
     print('Token Size:', spend_tokens)
-
