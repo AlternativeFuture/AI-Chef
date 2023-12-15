@@ -24,7 +24,7 @@ SYSTEM_PROMPT_CHEF = """You are a useful helper that can supply the name of the 
           measurements in SI units, and cooking instructions for three different dishes that can be made with the 
           components that are provided."""
 USER_PROMPT = "ingredients: {}."
-# Current data is{}.
+# Current data is{}.   Also, don't count ingredients you can't identify
 GPT_CONFIG = {"gpt_model": GPT_3,
               "api_key": os.environ.get("GPT_API_SECRET_KEY", "dev"),
               "response_format": {"type": "json_object"},
@@ -33,7 +33,3 @@ GPT_CONFIG = {"gpt_model": GPT_3,
               "system_prompt_json": SYSTEM_PROMPT_JSON,
               "system_prompt_chef": SYSTEM_PROMPT_CHEF,
               "user_prompt": USER_PROMPT}
-
-# PROMPT = [json.dumps({"role": "system", "content": SYSTEM_PROMPT_JSON}),
-#           json.dumps({"role": "system", "content": SYSTEM_PROMPT_CHEF}),
-#           json.dumps({"role": "user", "content": USER_PROMPT})]

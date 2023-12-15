@@ -13,8 +13,8 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/result', methods=['POST'])
-def result():
+@app.route('/recipe', methods=['POST'])
+def recipe():
     if request.method == 'POST':
 
         ingredients = request.form.get('ingredients')
@@ -22,8 +22,8 @@ def result():
         if len(ingredients) > 3:
 
             res, _ = gpt_response(config.GPT_CONFIG, ingredients)
-
-            return render_template("result.html", result=json.loads(res).get('dishes'))
+            # import pdb; pdb.set_trace()
+            return render_template("index.html", result=json.loads(res).get('dishes'))
 
         return redirect(url_for('home'))
 

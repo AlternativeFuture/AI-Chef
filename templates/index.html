@@ -40,12 +40,14 @@
       <div class="hero">
         <img src="{{ url_for('static',filename='assets/hero.jpg') }}" alt="hero-img" />
         <div class="offer">
-          <h1><span>Enjoy</span>premium coffee at our charming cafe</h1>
+           <h1>
+            Taste the <span>magic:</span> easy, delicious recipes just for you!
+          </h1>
           <p>
-            With its inviting atmosphere and delicious coffee options, the
-            Coffee House Resource is a popular destination for coffee lovers and
-            those seeking a warm and inviting space to enjoy their favorite
-            beverage.
+            Unleash Flavorful Creations: Dive into a world of taste with our
+            recipes designed to transform ordinary ingredients into
+            extraordinary dishes. From quick bites to gourmet delights, we've
+            got your cravings covered.
           </p>
           <div class="offer1btn">
             <div class="offer-btn">
@@ -58,10 +60,10 @@
     </section>
     <section id="start-cooking">
       <h2>
-        <span>AI Chef</span> gives you <span>free</span> recipes, just enter your preferred ingredients.
+        <span>AI Chef</span> gives you  <span>free</span> recipes, just enter your preferred ingredients.
       </h2>
       <div class="form-container">
-        <form action="{{ url_for('result')}}" method="POST">
+        <form action="{{ url_for('recipe')}}" method="POST">
           <label for="ingredients"><h3>Input ingredients:</h3></label>
           <!-- <input
             type="text"
@@ -239,9 +241,9 @@
       <div id="containerFooter">
         <div class="offer3">
           <h2>
-            Sip, Savor, Smile.<span
+            Whisk, Taste, Delight.<span
               ><br />
-              It’s coffee time!</span
+              Time to cook up joy in every bite!</span
             >
           </h2>
           <div class="social-icons">
@@ -308,5 +310,17 @@
         </div>
       </div>
     </footer>
+  <table border = 1>
+    {% for item in result %}
+    {% for key, value in item.items() %}
+
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+    {% endfor %}
+ </table>
   </body>
 </html>
