@@ -1,86 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Form</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .form-container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
-      animation: fadeInUp 0.5s ease-in-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-
-<div class="form-container">
-  <form action="{{ url_for('result')}}" method = "POST">
-
-      <label for="ingredients">Input ingredients:</label>
-      <input type="text" id="ingredients" name="ingredients" placeholder="Enter your ingredients" required>
-
-    <button type="submit">Submit</button>
-  </form>
-</div>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <title>AI Chef</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='assets/chef.png') }}"/>
+  </head>
+  <body>
+    <header>
+      <div class="logo-menu">
+        <a href="./index.html">
+          <img src="{{ url_for('static',filename='assets/logo.png') }}" alt="logo" />
+        </a>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#Favourites-Coffee">How To Use</a></li>
+            <li><a href="#start-cooking">Start Cooking</a></li>
+            <li><a href="#Mobile-App">Armenian Cuisine</a></li>
+            <li><a href="#containerFooter">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="menu-cup">
+          <ul>
+            <li>
+              <a
+                class="menu-cup-a"
+                style="display: flex"
+                href="./menu-coffee.html"
+                ><p style="margin-right: 8px">Sign In</p>
+                <img src="{{ url_for('static',filename='assets/chef.png') }}" alt="coffee-cup"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="enjoy">
+      <div class="hero">
+        <img src="{{ url_for('static',filename='assets/hero.jpg') }}" alt="hero-img" />
+        <div class="offer">
+          <h1><span>Enjoy</span>premium coffee at our charming cafe</h1>
+          <p>
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee House Resource is a popular destination for coffee lovers and
+            those seeking a warm and inviting space to enjoy their favorite
+            beverage.
+          </p>
+          <div class="offer1btn">
+            <div class="offer-btn">
+              <a class="p-menu" href="#start-cooking">Cook</a
+              ><img src="{{ url_for('static',filename='assets/cooking.png') }}" alt="coffee-cup" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="start-cooking">
+      <h2>
+        <span>AI Chef</span> gives you <span>free</span> recipes, just enter your preferred ingredients.
+      </h2>
+      <div class="form-container">
+        <form action="{{ url_for('result')}}" method="POST">
+          <label for="ingredients"><h3>Input ingredients:</h3></label>
+          <!-- <input
+            type="text"
+            id="ingredients"
+            name="ingredients"
+            placeholder="Enter your ingredients"
+            required
+          /> -->
+          <textarea
+            required
+            placeholder="Enter your ingredients"
+            name="ingredients"
+            id="ingredients"
+            cols="80"
+            rows="5"
+          ></textarea>
+          <button class="submit" type="submit">
+            <p class="submit-p">Submit</p>
+            <img src="{{ url_for('static',filename='assets/food.png') }}" alt="salt">
+          </button>
+        </form>
+      </div>
+    </section>
+    <div id="Favourites-Coffee" class="coffee-menu">
+      <div class="row1">
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/Basturma.jpg') }}" alt="image1" />
+          </div>
+          <div class="description">
+            <h2>Basturma</h2>
+            <p class="description-p">
+              Making Basturma is an ancient Armenian practice, which was once
+              viewed as something of pure significance. Basturma is a special,
+              processed dried raw meat made from beef tenderloin. The meat is
+              then cut and salted and put aside for a few days so it can absorb
+              the salt. Then, the cured meat is dipped into a special mixture of
+              fenugreek, salt, ground red pepper, and garlic and hung to air
+              dry. It needs to be kept in a cool corner, allowing you to enjoy
+              it for up to 3 months. The process of making basturma dates back
+              to medieval Armenia, and it was so common among Armenians at the
+              time that Basturmajian became a surname that is still used
+              nowadays. It is served in paper-thin slices as an appetizer or can
+              be added in omelets and salads to give them a unique taste.
+            </p>
+          </div>
+        </div>
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/Dolma.jpg') }}" alt="image2" />
+          </div>
+          <div class="description">
+            <h2>Tolma</h2>
+            <p class="description-p">
+              One of the easiest dishes in Armenia cuisine (if cooked correctly)
+              is definitely Tolma or Dolma (Տոլմա). It is a dish made with meat
+              and spices and other ingredients rolled into grape leaves (most
+              popular) or cabbage. Alternatively, it can be stuffed in
+              vegetables like eggplant, tomato, pepper, or even stuffed in
+              apples. Tolma is an old dish popular in the Caucasus, Central
+              Asia, the Middle East, and even in many Mediterranean countries.
+              In Armenia, tolma has been around for centuries and is a very
+              important part of the cuisine. There is even a Tolma festival that
+              takes place in the country where you can try over 50 different
+              types of the Armenian food! The typical ingredients for tolma are
+              beef mince, rice, chopped onion, coriander and parsley, chopped
+              garlic, tomato sauce, black pepper, salt, and grape leaves. After
+              mixing all the ingredients together with the minced meat, the
+              tolma is assembled layer by layer in a pot and prepared on a 150C
+              fire for 50-60 minutes without mixing because you cant mix tolma
+              (it’s an unwritten rule in Armenia)!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/Kufta.jpg') }}" alt="image5" />
+          </div>
+          <div class="description">
+            <h2>Kufta</h2>
+            <p class="description-p">
+              Kufta (or qyufta in Armenian) is an interesting Armenian dish that
+              is savory and absolutely delicious. The dish is reminiscent to
+              meatballs and it is a part of every wedding or large gathering in
+              Armenia and the kufta is served in different manners depending on
+              where in Armenia you are. One of the most popular types is
+              Echmiadzin kufta. But, there is a different type called Ishli
+              Kufta. The main ingredients in kufta are beef, onion, butter, egg,
+              black pepper, and salt. It’s boiled in water and then served with
+              butter, or it is boiled and then fried, depending on how you like
+              it.
+            </p>
+          </div>
+        </div>
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/Zhingyalov-hats.jpg') }}" alt="image6" />
+          </div>
+          <div class="description">
+            <h2>Zhingyalov hats</h2>
+            <p class="description-p">
+              Ask any Armenian about the dish that symbolizes Artsakh, and the
+              answer will undoubtedly be Jingyalov Hats. For decades, the
+              preparation of this dish signaled the arrival of spring in
+              Artsakh, with the entire family participating in the process. It
+              is a complete vegan and Lent-friendly dish full of chopped greens,
+              where the balance of sour, herb, and bitter notes should always be
+              achieved. Greens are mixed and matched, then stuffed into a
+              paper-thin flatbread, which then cooks on the stovetop. Don’t be
+              confused in case you can’t identify a single herb in jingyalov
+              hats, because it might include more than 40 herbs in different
+              recipes! Nine of the herbs are considered essentials (coriander,
+              green garlic, nettle, capsella, chickweed, kdzmdzuk, spring onion,
+              mint, sorrel). Take a trip to Artsakh and try one made by locals –
+              you certainly won’t regret it!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row3">
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/paxlava.jpg') }}" alt="image5" />
+          </div>
+          <div class="description">
+            <h2>Pakhlava</h2>
+            <p class="description-p">
+              The list of Armenian sweet dishes wouldn’t be complete without
+              this little gem, Pakhlava, which originated from the eastern
+              cuisine. In Western Armenia, it was called Baklava, while in the
+              Eastern part, they call it Pakhlava. This mouthwatering pastry
+              with multi-layered paper-thin dough, chopped walnuts, and honey
+              will certainly not leave you disappointed. The mixture of sugar
+              and walnuts is added to each dough layer, put in a large pan to
+              bake, and when ready, the final dessert is topped with honey or
+              syrup. It is a popular dish in not only Armenia but also in Iran,
+              Turkey, Uzbekistan, and Greece, albeit with some variations.
+              Nowadays, Gavar is a renowned place where you can try the best
+              Paklava with its traditional unique flavors. Traditionally it was
+              a must serve dessert during weddings, baptisms, and birthdays.
+              Pakhlava has now become a common dessert found in almost every
+              restaurant and cafe in Yerevan.
+            </p>
+          </div>
+        </div>
+        <div class="coffees">
+          <div class="box">
+            <img src="{{ url_for('static',filename='assets/sujux.webp') }}" alt="image6" />
+          </div>
+          <div class="description">
+            <h2>Sujukh</h2>
+            <p class="description-p">
+              In case you have a sweet tooth and are really keen to discover the
+              full range of Armenian sweet assortment, you certainly should not
+              miss trying Armenian sweet sujukh. Since ancient times, its
+              preparation process was like a ritual and a reason for family
+              gatherings. It is a tasty sausage-shaped threaded sweet made from
+              walnuts and fruit juice of your choice. It is a nutritious snack
+              that can be eaten for breakfast or as an after-meal dessert. At
+              first, the walnuts are threaded on a durable string and put aside.
+              Next comes making the syrup on the gas stove from fruit juice
+              (grape juice is mainly used), sugar, and flour. Stir it until it
+              becomes thick and brown and dip the thread in it and hang to dry.
+              Sujukh season starts in mid-fall when the walnuts are fresh and
+              soft, and sujukh is primarily made in the town of Ashtarak,
+              Aragatsotn region (known as the land of walnuts).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="containerFooter">
+        <div class="offer3">
+          <h2>
+            Sip, Savor, Smile.<span
+              ><br />
+              It’s coffee time!</span
+            >
+          </h2>
+          <div class="social-icons">
+            <button class="social-button">
+              <img
+                class="icons"
+                src="{{ url_for('static',filename='assets/Footer-icons/twitter.svg') }}"
+                alt="twitter-icon"
+              />
+            </button>
+            <button class="social-button">
+              <img
+                class="icons"
+                src="{{ url_for('static',filename='assets/Footer-icons/instagram.svg') }}"
+                alt="instagram-icon"
+              />
+            </button>
+            <button class="social-button">
+              <img
+                class="icons"
+                src="{{ url_for('static',filename='assets/Footer-icons/facebook.svg') }}"
+                alt="facebook-icon"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="contacts-info">
+          <h3>Contact us</h3>
+          <div class="contacts">
+            <ul>
+              <li class="socialUl">
+                <a
+                  href="https://maps.app.goo.gl/C6BU3szfkT4J7odY8"
+                  target="_blank"
+                  style="text-decoration: none"
+                  class="cnt-ifo-underline"
+                  ><img
+                    src="{{ url_for('static',filename='assets/Footer-icons/pin-alt.svg') }}"
+                    alt="pin-icon"
+                  />
+                  <p class="contact-info">8558 Green Rd., LA</p></a
+                >
+              </li>
+              <li class="socialUl">
+                <a href="tel:+1 (603) 555-0123" class="cnt-ifo-underline"
+                  ><img
+                    src="{{ url_for('static',filename='assets/Footer-icons/phone.svg') }}"
+                    alt="phone-icon"
+                  />
+                  <p class="contact-info">+1 (603) 555-0123</p></a
+                >
+              </li>
+              <li class="socialUl">
+                <a class="anchorNone"
+                  ><img
+                    src="{{ url_for('static',filename='assets/Footer-icons/clock.svg') }}"
+                    alt="clock-icon"
+                  />
+                  <p class="contact-info">Mon-Sat: 9:00 AM – 23:00 PM</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -2,6 +2,11 @@ from openai import OpenAI
 import json
 import config
 from decorators import timeit
+# import datetime
+
+
+# TODO: send current time
+# current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 @timeit
