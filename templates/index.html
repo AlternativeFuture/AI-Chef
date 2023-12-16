@@ -17,7 +17,7 @@
           <ul class="navbar">
             <li><a href="#Favourites-Coffee">How To Use</a></li>
             <li><a href="#start-cooking">Start Cooking</a></li>
-            <li><a href="#Mobile-App">Armenian Cuisine</a></li>
+            <li><a href="#Armenian-Cuisine">Armenian Cuisine</a></li>
             <li><a href="#containerFooter">Contact us</a></li>
           </ul>
         </nav>
@@ -40,7 +40,7 @@
       <div class="hero">
         <img src="{{ url_for('static',filename='assets/hero.jpg') }}" alt="hero-img" />
         <div class="offer">
-           <h1>
+          <h1>
             Taste the <span>magic:</span> easy, delicious recipes just for you!
           </h1>
           <p>
@@ -51,8 +51,8 @@
           </p>
           <div class="offer1btn">
             <div class="offer-btn">
-              <a class="p-menu" href="#start-cooking">Cook</a
-              ><img src="{{ url_for('static',filename='assets/cooking.png') }}" alt="coffee-cup" />
+              <a class="p-menu" href="./menu-coffee.html">Cook</a
+               ><img src="{{ url_for('static',filename='assets/cooking.png') }}" alt="coffee-cup" />
             </div>
           </div>
         </div>
@@ -65,13 +65,6 @@
       <div class="form-container">
         <form action="{{ url_for('recipe')}}" method="POST">
           <label for="ingredients"><h3>Input ingredients:</h3></label>
-          <!-- <input
-            type="text"
-            id="ingredients"
-            name="ingredients"
-            placeholder="Enter your ingredients"
-            required
-          /> -->
           <textarea
             required
             placeholder="Enter your ingredients"
@@ -81,15 +74,52 @@
             rows="5"
           ></textarea>
           <button class="submit" type="submit">
-            <p class="submit-p">Submit</p>
+            <p class="submit-p">Generate</p>
             <img src="{{ url_for('static',filename='assets/food.png') }}" alt="salt">
           </button>
         </form>
       </div>
+      <table border="1">
+        {% for item in result %} {% for key, value in item.items() %}
+
+        <tr>
+          <th>{{ key }}</th>
+          <td>{{ value }}</td>
+        </tr>
+
+        {% endfor %} {% endfor %}
+      </table>
     </section>
-    <div id="Favourites-Coffee" class="coffee-menu">
+    <div id="Armenian-Cuisine" class="arm-meals">
+      <div class="about-cuiseine">
+        <h6>Armenian Cuisine</h6>
+        <p class="cuisine-p">
+          National cuisine is an element of the national culture, which holds
+          not only the history of the people, but his mentality, spirit and
+          character. Culinary traditions of Armenia originate from ancient
+          times. It is known that the Armenians were aware of the processes of
+          fermentation and baking even 2500 years ago. Armenian bread - lavash,
+          has been included in the list of Intangible Cultural Heritage by
+          UNESCO 2014. Armenian cuisine is as diverse as Armenia itself.
+          Armenian dishes remain unchanged. Tradition is manifested in the
+          cooking technologies, in the use of old kitchen utensils, as well as
+          in an assortment of food. When cooking dishes the pottery is used, as
+          well as a special kind of fireplace known as tonir. Tonir is a tapered
+          cylinder, made of refractory clay and dug in the ground. Tonir is used
+          not only for baking lavash, but also for cooking soups and vegetables
+          as well as smoked fish and poultry.Armenian cuisine has a variety of
+          dishes on the composition, as well as a complex flavor and aroma
+          range. This is due to the fact that the products used in Armenian
+          cuisine, grow steadily in the territory of the Armenian plateau and
+          the Ararat Valley. Main dishes of Armenian cuisine are dishes of meat,
+          in various ways of preparation. abundance of meat on the Armenian
+          table is the result of ancient cattle breeding on the territory of
+          modern Armenia. Lamb, beef, veal, pork, and poultry are used in the
+          diet of the Armenians.
+        </p>
+      </div>
       <div class="row1">
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/Basturma.jpg') }}" alt="image1" />
           </div>
@@ -111,7 +141,7 @@
             </p>
           </div>
         </div>
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/Dolma.jpg') }}" alt="image2" />
           </div>
@@ -140,7 +170,7 @@
         </div>
       </div>
       <div class="row2">
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/Kufta.jpg') }}" alt="image5" />
           </div>
@@ -160,7 +190,7 @@
             </p>
           </div>
         </div>
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/Zhingyalov-hats.jpg') }}" alt="image6" />
           </div>
@@ -186,7 +216,7 @@
         </div>
       </div>
       <div class="row3">
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/paxlava.jpg') }}" alt="image5" />
           </div>
@@ -211,7 +241,7 @@
             </p>
           </div>
         </div>
-        <div class="coffees">
+        <div class="meals">
           <div class="box">
             <img src="{{ url_for('static',filename='assets/sujux.webp') }}" alt="image6" />
           </div>
@@ -248,25 +278,34 @@
           </h2>
           <div class="social-icons">
             <button class="social-button">
-              <img
-                class="icons"
+              <a href="https://twitter.com/simplyrecipes" target="_blank">
+                <img
+                  class="icons"
                 src="{{ url_for('static',filename='assets/Footer-icons/twitter.svg') }}"
-                alt="twitter-icon"
-              />
+                  alt="twitter-icon"
+                />
+              </a>
             </button>
             <button class="social-button">
-              <img
-                class="icons"
+              <a href="https://www.instagram.com/nytcooking/" target="_blank">
+                <img
+                  class="icons"
                 src="{{ url_for('static',filename='assets/Footer-icons/instagram.svg') }}"
-                alt="instagram-icon"
-              />
+                  alt="instagram-icon"
+                />
+              </a>
             </button>
             <button class="social-button">
-              <img
-                class="icons"
+              <a
+                href="https://www.facebook.com/HomeCookingShow/"
+                target="_blank"
+              >
+                <img
+                  class="icons"
                 src="{{ url_for('static',filename='assets/Footer-icons/facebook.svg') }}"
-                alt="facebook-icon"
-              />
+                  alt="facebook-icon"
+                />
+              </a>
             </button>
           </div>
         </div>
@@ -284,7 +323,7 @@
                     src="{{ url_for('static',filename='assets/Footer-icons/pin-alt.svg') }}"
                     alt="pin-icon"
                   />
-                  <p class="contact-info">8558 Green Rd., LA</p></a
+                  <p class="contact-info">2A Halabyan St, Yerevan 0038</p></a
                 >
               </li>
               <li class="socialUl">
@@ -293,7 +332,7 @@
                     src="{{ url_for('static',filename='assets/Footer-icons/phone.svg') }}"
                     alt="phone-icon"
                   />
-                  <p class="contact-info">+1 (603) 555-0123</p></a
+                  <p class="contact-info">+ (374) 93 22 22 07</p></a
                 >
               </li>
               <li class="socialUl">
@@ -310,17 +349,5 @@
         </div>
       </div>
     </footer>
-  <table border = 1>
-    {% for item in result %}
-    {% for key, value in item.items() %}
-
-    <tr>
-       <th> {{ key }} </th>
-       <td> {{ value }} </td>
-    </tr>
-
-    {% endfor %}
-    {% endfor %}
- </table>
   </body>
 </html>

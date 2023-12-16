@@ -213,13 +213,27 @@ h1 ~ p {
 /* Start Cooking section */
 
 #start-cooking {
-  height: 600px;
+  height: 1000px;
   margin: 80px 30px 0;
   background-color: #403f3d;
   display: flex;
   align-items: center;
   flex-direction: column;
   border-radius: 40px;
+}
+
+table {
+  margin-top: 60px;
+  background-color: #6b6060;
+  width: 90.5%;
+  height: 350px;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+th, td, tr {
+  border: none;
 }
 
 #start-cooking h2 {
@@ -240,12 +254,12 @@ h1 ~ p {
   padding: 20px;
   border-radius: 20px;
   width: 90%;
-  height: 40%;
+  height: 30%;
   animation: fadeInUp 0.5s ease-in-out;
 }
 
 .submit {
-  margin-top: 90px;
+  margin-top: 16px;
   margin-left: 42%;
   position: relative;
   color: #403f3d;
@@ -267,7 +281,7 @@ h1 ~ p {
 
 .submit-p {
   position: absolute;
-  right: 80px;
+  right: 64px;
   transition: margin-right 0.3s ease-in-out;
   text-decoration: none;
   color: #403f3d;
@@ -285,7 +299,7 @@ h1 ~ p {
   width: 35px;
   position: relative;
   bottom: 3px;
-  margin-left: 50px;
+  margin-left: 90px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.5s ease-in-out;
@@ -335,11 +349,37 @@ textarea {
 
 /* Armenian Cuisine section */
 
-.coffee-menu {
-  margin: 40px 30px 0;
+#Armenian-Cuisine {
+  margin-top: 80px;
 }
 
-.coffees {
+.arm-meals {
+  margin: 40px 30px 0;
+  text-align: center;
+}
+
+h6 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+  color: #403f3d;;
+  margin-bottom: 40px;
+}
+
+.cuisine-p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #403f3d;
+  margin-bottom: 80px;
+}
+
+.about-cuisine {
+  margin-bottom: 30px;
+}
+
+.meals {
   width: 620px;
   display: flex;
   justify-content: start;
@@ -557,6 +597,12 @@ a[target="_blank"] {
   content: none;
 }
 
+.contacts-info {
+  margin-left: 160px;
+}
+
+
+
 @media only screen and (min-width: 1440px) {
   html {
     display: flex;
@@ -566,8 +612,6 @@ a[target="_blank"] {
   }
 
   body {
-    width: 1440px;
-    height: 100vh;
     font-family: Inter;
     background-color: #e1d4c9;
   }
@@ -665,6 +709,7 @@ a[target="_blank"] {
   }
 
   .hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -672,14 +717,14 @@ a[target="_blank"] {
 
   img[alt="hero-img"] {
     height: 644px;
-    width: 1360px;
+    width: 100%;
     border-radius: 40px;
   }
 
   .offer {
     position: absolute;
-    right: 680px;
-    top: 201px;
+    left: 80px;
+    top: 60px;
     display: flex;
     width: 530px;
     flex-direction: column;
@@ -709,7 +754,6 @@ a[target="_blank"] {
   }
 
   .offer-btn {
-    position: relative;
     color: #403f3d;
     border-style: none;
     display: flex;
@@ -763,7 +807,14 @@ a[target="_blank"] {
     }
   }
 
-  /*favorite-coffee*/
+  
+
+  /* Start Cooking section */
+
+
+.submit {
+  margin-left: 46%;
+}
 
   /* footer */
 
@@ -775,126 +826,8 @@ a[target="_blank"] {
   }
 
   #containerFooter {
-    margin-top: 98px;
-    display: flex;
-    align-items: center;
-    background-color: #665f55;
-    width: 1360px;
-    height: 450px;
-    padding: 100px;
-    border-radius: 40px;
-    gap: 100px;
-  }
-
-  .offer3 {
-    width: 530px;
-    height: 250px;
-  }
-
-  .offer3 h3 span {
-    font-size: 60px;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 75px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-
-  .offer3 h2 {
-    font-family: Inter;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 75px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #e1d4c9;
-  }
-
-  .social-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border: 1px solid #c1b6ad;
-    background-color: transparent;
-    margin-right: 8px;
-    margin-top: 40px;
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .icons {
-    transition: filter 0.5s ease-in-out;
-  }
-
-  .social-button:hover .icons {
-    filter: invert(70%) sepia(15%) saturate(120%) hue-rotate(30deg)
-      brightness(1.2) contrast(0.9);
-  }
-
-  .social-button:hover {
-    background-color: #e1d4c9;
-  }
-
-  .contacts-info h3 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #e1d4c9;
-  }
-
-  .contacts-info {
-    margin-left: 160px;
-  }
-
-  .socialUl {
-    list-style-type: none;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    display: flex;
-    margin-top: 18px;
-    position: relative;
-    padding: 5px 0;
-  }
-
-  .socialUl a {
-    display: flex;
-    cursor: pointer;
-  }
-
-  a[href="tel:+1 (603) 555-0123"],
-  a[target="_blank"] {
-    text-decoration: none;
-  }
-
-  .contact-info {
-    color: #e1d4c9;
-    margin-left: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-
-  .cnt-ifo-underline:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #e1d4c9;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  .cnt-ifo-underline:hover:after {
+    justify-content: space-between;
     width: 100%;
-    left: 0;
   }
 
-  .anchorNone::after {
-    content: none;
-  }
 }
