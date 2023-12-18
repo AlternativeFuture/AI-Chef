@@ -3,12 +3,16 @@ export FLASK_APP=app
 run:
 	python app.py
 
-#migrate:
-#	alembic upgrade head
+#RUN=docker compose run --rm project
 #
-#test:
-#	pytest -vvv -x --pdb
+#all:
+#	DOCKER_BUILDKIT=0 docker compose build
 #
-#lint:
-#	python3 -m flake8 --max-line-length 120 app/
-
+#run:
+#	docker compose run --service-ports --rm project
+#
+#shell:
+#	docker compose run --rm project /bin/bash
+#
+#stop:
+#	docker compose down

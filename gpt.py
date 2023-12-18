@@ -9,7 +9,7 @@ from decorator import timeit
 @timeit
 def gpt_response(gpt_config: dict, ingredients: str, debug: bool) -> tuple:
     if debug:
-        return gpt_config['response_example'], ''  # :TODO implement debug mode
+        return gpt_config['response_example'], ''  # TODO: implement debug mode
     try:
         client = OpenAI(api_key=gpt_config['api_key'])
 
@@ -28,7 +28,7 @@ def gpt_response(gpt_config: dict, ingredients: str, debug: bool) -> tuple:
         return response.choices[0].message.content, response.usage
     except Exception as e:
         print(e)
-        # app.logger.info(e)
+        # TODO: implement logger. app.logger.info(e)
         return None, None
 
 

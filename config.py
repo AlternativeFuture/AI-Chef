@@ -7,8 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-FLASK_HOST = os.environ.get('FLASK_HOST', '127.0.0.1')
-FLASK_PORT = os.environ.get('FLASK_PORT', 5000)
+FLASK_SECRET_KEY = 'super secret key'
+FLASK_HOST = os.environ.get('FLASK_HOST', '0.0.0.0')
+FLASK_PORT = os.environ.get('FLASK_PORT', 80)
 DEBUG = True
 
 LOG_LEVEL = logging.ERROR

@@ -15,20 +15,17 @@
         </a>
         <nav>
           <ul class="navbar">
-            <li><a href="#Favourites-Coffee">How To Use</a></li>
+            <li><a href="#how-to-use">How To Use</a></li>
             <li><a href="#start-cooking">Start Cooking</a></li>
             <li><a href="#Armenian-Cuisine">Armenian Cuisine</a></li>
             <li><a href="#containerFooter">Contact us</a></li>
           </ul>
         </nav>
-        <div class="menu-cup">
+        <div class="menu-hat">
           <ul>
             <li>
-              <a
-                class="menu-cup-a"
-                style="display: flex"
-                href="./menu-coffee.html"
-                ><p style="margin-right: 8px">Sign In</p>
+              <a class="menu-hat-a">
+                <p>Sign In</p>
                 <img src="{{ url_for('static',filename='assets/chef.png') }}" alt="coffee-cup"
               /></a>
             </li>
@@ -46,17 +43,32 @@
           <p>
             Unleash Flavorful Creations: Dive into a world of taste with our
             recipes designed to transform ordinary ingredients into
-            extraordinary dishes. From quick bites to gourmet delights, we've
-            got your cravings covered.
+            extraordinary dishes. From quick bites to gourmet delights,
+            <span class="offr-p">we've got</span>
+            your cravings covered.
           </p>
           <div class="offer1btn">
-            <div class="offer-btn">
-              <a class="p-menu" href="./menu-coffee.html">Cook</a
-               ><img src="{{ url_for('static',filename='assets/cooking.png') }}" alt="coffee-cup" />
-            </div>
+            <button
+              class="offer-btn"
+              onclick="window.location.href='#start-cooking'"
+            >
+              <a class="p-menu" href="#start-cooking">Cook</a
+              ><img src="{{ url_for('static',filename='assets/cooking.png') }}" alt="coffee-cup" />
+            </button>
           </div>
         </div>
       </div>
+    </section>
+    <section id="how-to-use">
+      <h2>
+        To generate recipes, enter your preferred ingredients in the input
+        field, click the generate button, and let our AI Chef work its magic to
+        create delicious recipes for you in a few seconds. Keep in mind that our
+        AI Chef is designed for edible ingredients only,<span>
+          so please refrain from including non-food items such as electronics
+          ☎️, footwear 👞, or non-food items</span
+        >
+      </h2>
     </section>
     <section id="start-cooking">
       <h2>
@@ -65,11 +77,12 @@
       <h2 style="color: #E32235;">
         You should enter valid ingredients!!!
       </h2>
+      <br>
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
           <ul class=flashes>
           {% for category, message in messages %}
-            <li class="{{ category }}">{{ message }}</li>
+            <li style="color: #E32235;" class="{{ category }}">{{ message }}</li>
           {% endfor %}
           </ul>
         {% endif %}
@@ -100,7 +113,6 @@
 
               <td>
 
-
               <th>Dish name: {{ item.name }}</th>
 
               <th>
@@ -113,14 +125,11 @@
 
               <th>How cooke: {{ item.instructions }}</th>
 
-
-
             </td>
 
               </col>
 
             {% endfor %}
-
 
           </table>
       {% endif %}
@@ -157,7 +166,7 @@
       <div class="row1">
         <div class="meals">
           <div class="box">
-            <img src="{{ url_for('static',filename='assets/Basturma.jpg') }}" alt="image1" />
+            <img src="{{ url_for('static',filename='assets/Basturma.jpg') }}" alt="image" />
           </div>
           <div class="description">
             <h2>Basturma</h2>
@@ -179,7 +188,7 @@
         </div>
         <div class="meals">
           <div class="box">
-            <img src="{{ url_for('static',filename='assets/Dolma.jpg') }}" alt="image2" />
+            <img src="{{ url_for('static',filename='assets/Dolma.jpg') }}" alt="image" />
           </div>
           <div class="description">
             <h2>Tolma</h2>
