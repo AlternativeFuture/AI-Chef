@@ -217,16 +217,13 @@ h1 ~ p {
   border-radius: 40px;
   margin: 80px 30px 0;
   padding: 40px 0px;
-
 }
-
 
 #how-to-use h2 {
   margin: auto;
   width: 90%;
   color: #e1d4c9;
   line-height: 1.8;
-  
 }
 
 #how-to-use span {
@@ -242,6 +239,7 @@ h1 ~ p {
   align-items: center;
   flex-direction: column;
   border-radius: 40px;
+  padding-bottom: 40px;
 }
 
 table {
@@ -1019,8 +1017,6 @@ a[target="_blank"] {
 }
 
 @media only screen and (max-width: 500px) {
-
-
   /* navbar section */
 
   header {
@@ -1077,6 +1073,7 @@ a[target="_blank"] {
   .menu-hat {
     font-size: 10px;
     font-weight: 500;
+    margin-top: 7px;
   }
 
   img[alt="coffee-cup"] {
@@ -1106,12 +1103,12 @@ a[target="_blank"] {
     position: absolute;
     left: 40px;
     right: 10px;
-    top: 20px;
+    top: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
   }
 
   span {
@@ -1149,7 +1146,6 @@ a[target="_blank"] {
     right: 26px;
   }
 
-
   .offer-btn:hover .p-menu {
     margin-right: 10px;
   }
@@ -1163,16 +1159,14 @@ a[target="_blank"] {
     bottom: 0px;
   }
 
-/* how-to-use */
+  /* how-to-use */
 
   #how-to-use {
     border-radius: 20px;
     margin: 40px 10px 0;
     padding: 20px 0px;
-  
   }
-  
-  
+
   #how-to-use h2 {
     margin: auto;
     line-height: 1.3;
@@ -1180,9 +1174,8 @@ a[target="_blank"] {
     font-weight: 500;
   }
 
-
   /* Start Cooking section */
-  
+
   #start-cooking {
     width: 95%;
     margin: 40px 10px;
@@ -1195,10 +1188,8 @@ a[target="_blank"] {
     font-size: 16px;
     font-weight: 500;
     margin-top: 20px;
-
   }
 
-  
   .form-container {
     margin-top: 20px;
     padding: 10px;
@@ -1215,14 +1206,14 @@ a[target="_blank"] {
   textarea {
     font-size: 12px;
   }
-  
+
   .submit {
     width: 110px;
     height: 35px;
     padding: 10px 0px;
     font-weight: 500;
     margin-top: 14px;
-    margin-left: 42%;
+    margin-left: 12%;
     position: relative;
     display: flex;
     gap: 8px;
@@ -1235,18 +1226,16 @@ a[target="_blank"] {
     right: 27px;
     letter-spacing: 1px;
   }
-  
 
   .submit:hover .submit-p {
     margin-right: 10px;
   }
-  
+
   .submit img[alt="salt"] {
     width: 20px;
     bottom: 3px;
     margin-left: 60px;
   }
-
 
   table {
     margin-top: 20px;
@@ -1264,208 +1253,206 @@ a[target="_blank"] {
     border: none;
   }
 
-  /* Armenian Cuisine section */
-
-  #Armenian-Cuisine {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    width: 95%;
-    border-radius: 20px;
-    padding-bottom: 0px;
-  }
-
-  .arm-meals {
-    margin: 40px 10px 0;
-    text-align: center;
-  }
-
-  h6 {
-    padding-top: 30px;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-
-  .cuisine-p {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .description h2 {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .description-p {
-    margin-top: 20px;
-    font-size: 16px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-  }
-
-
-  .about-cuisine {
-    margin-bottom: 30px;
-  }
-
-  .meals {
-    width: 90%;
-    border-radius: 20px;
-    margin-bottom: 40px;
-  }
-
-  .box {
-    overflow: hidden;
-    width: 320px;
-    height: 200px;
-    border-radius: 0 0 40px 40px;
-  }
-
-  .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    justify-content: space-between;
-  }
-
-
-  h3 {
-    width: 270px;
-    height: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #403f3d;
-  }
-
-  .row1,
-  .row2,
-  .row3 {
-    gap: 20px;
-  }
-
-  .row2,
-  .row3 {
-    margin-top: 40px;
-  }
-
-  .box {
-    position: relative;
-  }
-
-  .box img {
-    width: 500px;
-    height: 400px;
-  }
-
-  /* footer */
-
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-
-  #containerFooter {
-    margin-top: 60px;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    padding: 20px;
-    border-radius: 20px;
-    gap: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .offer3 {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .offer3 h2 {
-    width: 100%;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-  }
-
-  .social-button {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border: 1px solid #c1b6ad;
-    background-color: transparent;
-    margin-right: 8px;
-    margin-top: 40px;
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: start;
-    width: 100%;
-  }
-
-
-  .contacts-info h3 {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .socialUl {
-    list-style-type: none;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    display: flex;
-    margin-top: 6px;
-    position: relative;
-    padding: 5px 0;
-  }
-
-  .socialUl a {
-    display: flex;
-    cursor: pointer;
-  }
-
-  .contact-info {
-    margin-left: 8px;
+  th,
+  td,
+  tr {
     font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-  }
 
+    /* Armenian Cuisine section */
 
-  .contacts-info {
-    margin-bottom: 55px;
-    margin-left: 0px;
-    align-self: flex-end;
-    margin-bottom: 0px;
+    #Armenian-Cuisine {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 20px;
+      width: 95%;
+      border-radius: 20px;
+      padding-bottom: 0px;
+    }
+
+    .arm-meals {
+      margin: 40px 10px 0;
+      text-align: center;
+    }
+
+    h6 {
+      padding-top: 30px;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .cuisine-p {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .description h2 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .description-p {
+      margin-top: 20px;
+      font-size: 16px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+    .about-cuisine {
+      margin-bottom: 30px;
+    }
+
+    .meals {
+      width: 90%;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+
+    .box {
+      overflow: hidden;
+      width: 320px;
+      height: 200px;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    h3 {
+      width: 270px;
+      height: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #403f3d;
+    }
+
+    .row1,
+    .row2,
+    .row3 {
+      gap: 20px;
+    }
+
+    .row2,
+    .row3 {
+      margin-top: 40px;
+    }
+
+    .box {
+      position: relative;
+    }
+
+    .box img {
+      width: 500px;
+      height: 400px;
+    }
+
+    /* footer */
+
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 30px;
+    }
+
+    #containerFooter {
+      margin-top: 60px;
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+      padding: 20px;
+      border-radius: 20px;
+      gap: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .offer3 {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .offer3 h2 {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    .social-button {
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      border-radius: 100px;
+      border: 1px solid #c1b6ad;
+      background-color: transparent;
+      margin-right: 8px;
+      margin-top: 40px;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+    }
+
+    .contacts-info h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .socialUl {
+      list-style-type: none;
+      margin-bottom: 2px;
+      margin-right: 2px;
+      display: flex;
+      margin-top: 6px;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .socialUl a {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .contact-info {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .contacts-info {
+      margin-bottom: 55px;
+      margin-left: 0px;
+      align-self: flex-end;
+      margin-bottom: 0px;
+    }
   }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 800px) {
-
-
   /* navbar section */
-
 
   nav {
     width: 70%;
@@ -1487,7 +1474,6 @@ a[target="_blank"] {
     position: relative;
     padding: 0px 0;
   }
-
 
   .menu-hat-a {
     font-weight: 500;
@@ -1578,7 +1564,6 @@ a[target="_blank"] {
     right: 26px;
   }
 
-
   .offer-btn:hover .p-menu {
     margin-right: 10px;
   }
@@ -1592,9 +1577,8 @@ a[target="_blank"] {
     bottom: 0px;
   }
 
-
   /* Start Cooking section */
-  
+
   #start-cooking {
     width: 96%;
     margin: 40px 10px;
@@ -1607,10 +1591,8 @@ a[target="_blank"] {
     font-size: 16px;
     font-weight: 500;
     margin-top: 20px;
-
   }
 
-  
   .form-container {
     margin-top: 20px;
     padding: 10px;
@@ -1627,7 +1609,7 @@ a[target="_blank"] {
   textarea {
     font-size: 12px;
   }
-  
+
   .submit {
     width: 110px;
     height: 35px;
@@ -1647,18 +1629,16 @@ a[target="_blank"] {
     right: 27px;
     letter-spacing: 1px;
   }
-  
 
   .submit:hover .submit-p {
     margin-right: 10px;
   }
-  
+
   .submit img[alt="salt"] {
     width: 20px;
     bottom: 3px;
     margin-left: 60px;
   }
-
 
   table {
     margin-top: 20px;
@@ -1710,7 +1690,6 @@ a[target="_blank"] {
     line-height: 16px;
   }
 
-
   .about-cuisine {
     margin-bottom: 30px;
   }
@@ -1736,7 +1715,6 @@ a[target="_blank"] {
     padding: 20px;
     justify-content: space-between;
   }
-
 
   h3 {
     width: 270px;
@@ -1800,7 +1778,6 @@ a[target="_blank"] {
     align-items: center;
   }
 
-
   .offer3 h2 {
     width: 100%;
     font-size: 20px;
@@ -1825,7 +1802,6 @@ a[target="_blank"] {
     justify-content: start;
     width: 100%;
   }
-
 
   .contacts-info h3 {
     font-size: 20px;
@@ -1854,7 +1830,6 @@ a[target="_blank"] {
     line-height: 20px;
   }
 
-
   .contacts-info {
     margin-bottom: 55px;
     margin-left: 0px;
@@ -1866,7 +1841,7 @@ a[target="_blank"] {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #826666 #ADA49C;
+  scrollbar-color: #826666 #ada49c;
 }
 
 /* Chrome, Edge and Safari */
@@ -1876,27 +1851,56 @@ a[target="_blank"] {
 }
 *::-webkit-scrollbar-track {
   border-radius: 20px;
-  background-color: #ADA49C;
+  background-color: #ada49c;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #D1C6BC;
+  background-color: #d1c6bc;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #503E3E;
+  background-color: #503e3e;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #826666;
-  border: 1px dotted #15C8FF;
+  border: 1px dotted #15c8ff;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #A01D51;
+  background-color: #a01d51;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #EBB586;
+  background-color: #ebb586;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+   height: 127vh;
+   justify-content: center;
+   align-items: center
+}
+
+tr {
+  display: flex;
+  flex-direction: column;
+}
+
+tbody {
+  margin-bottom: 30px;
+}
+
+th {
+  margin-bottom: 10px;
+}
+
+th,
+td,
+tr {
+  color: #ada49c;
+  font-size: 20px;
+  font-family: Inter;
 }
